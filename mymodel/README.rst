@@ -25,7 +25,7 @@ Usage
 Known issues / Roadmap
 ======================
 
-* Accounts in other currencies are not converted to the company currency.
+
 
 Bug Tracker
 ===========
@@ -39,7 +39,6 @@ Contributors
 ------------
 
 * Óscar Soto Ochoa.
-* SDI.
 
 Financiadores
 -------------

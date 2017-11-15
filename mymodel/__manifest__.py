@@ -2,14 +2,10 @@
 
 {
     "name": "My Model",
-    "version": "0.1",
-    "website": "",
-    "author": "Óscar Soto, "
-              "SDI, ",
-    "category": "",
-    "contributors": [
-
-    ],
+    "version": "1.0.0.0.0",
+    "website": "https://github.com/oscars8a/mymodules.git",
+    "author": "Óscar Soto",
+    "category": "Formacion",
     "license": 'AGPL-3',
     "depends": [
 
