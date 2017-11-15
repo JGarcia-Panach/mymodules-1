@@ -10,12 +10,12 @@ class Instance(models.Model):
     #Fields
     client = fields.Many2one('instance.manager.client','Client')
     ip = fields.Char('IP',15)
-    version = fields.selection()
+    version = fields.selection([(),()],'Version')
     domains = fields.One2many('modelo','campo','Domain')
     machine = fields.Char('Machine')
     state = fields.Boolean('State')
     backEndLogin = fields.Many2one('instance.manager.login','BackEnd Login')
     postgresqlLogin = fields.Many2one('instance.manager.login','Postgresql Login')
     sshLogin = fields.Many2one('instance.manager.loggin','SSH Login')
-    #repositories = campo calculado?
+    repositories = fields.Many2many('instance.manager.repository','Modules')
     modules = fields.Many2many('instance.manager.module','Modules')
