@@ -1,2 +1,2 @@
 # mymodules
-SDI Odoo Modules
+Formación Dario Odoo Modules
