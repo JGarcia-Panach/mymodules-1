@@ -1,4 +1,3 @@
-# Copyright (C) 2017 Creu Blanca
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html).
 
 from odoo import api, fields, models
@@ -8,10 +7,10 @@ class Instance(models.Model):
     _order = 'client'
 
     #Fields
-    client = fields.Many2one('res.partner','Client')
+    res_partner_id = fields.Many2one('res.partner','Client')
     ip = fields.Char('IP',15)
     version = fields.selection([('8.0','8.0'),('9.0','9.0'),('10.0','10.0'),('11.0','11.0')],'Version')
-    domains = fields.One2many('modelo','campo','Domain')
+    domain_ids = fields.Text('','Domains')
     machine = fields.Char('Machine')
     state = fields.Boolean('State')
     description = fields.Text('','Description');
@@ -21,5 +20,5 @@ class Instance(models.Model):
     postgrePass = fields.Char('Pass')
     sshUser = fields.Char('User')
     sshPass = fields.Char('Pass')
-    repositories = fields.Many2many('instance.manager.repository','Modules')
-    modules = fields.Many2many('instance.manager.module','Modules')
+    #repositories = fields.Many2many('instance.manager.repository','Modules')
+    #modules = fields.Many2many('instance.manager.module','Modules')

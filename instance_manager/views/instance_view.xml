@@ -11,38 +11,13 @@
             <field name="machine"/>
             <field name="state"/>
             <field name="description"/>
-            <field name="backEndLogin"/>
-            <field name="postgresqlLogin"/>
-            <field name="sshLogin"/>
-            <field name="repositories"/>
-            <field name="modules"/>
-        </tree>
-    </field>
-</record>
+            <field name="backEndUser"/>
+            <field name="backEndPass"/>
+            <field name="postgreUser"/>
+            <field name="postgrePass"/>
+            <field name="sshUser"/>
+            <field name="sshPass"/>
 
-<!-- ##### Form View ##### -->
-<record id="view_form_instance" model="ir.ui.view">
-    <field name="name">view_form_instance</field>
-    <field name="model">instance.manager.instance</field>
-    <field name="arch" type="xml">
-        <form>
-            <header><!-- Buttons and status widget --> </header>
-            <sheet><!-- Form    content --> </sheet>
-            <!-- History and communication: -->
-              <div class="oe_chatter">
-                <field name="client"/>
-                <field name="ip"/>
-                <field name="version"/>
-                <field name="domains"/>
-                <field name="machine"/>
-                <field name="state"/>
-                <field name="description"/>
-                <field name="backEndLogin"/>
-                <field name="postgresqlLogin"/>
-                <field name="sshLogin"/>
-                <field name="repositories"/>
-                <field name="modules"/>
-              </div>
-        </form>
+        </tree>
     </field>
 </record>
