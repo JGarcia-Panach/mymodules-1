@@ -8,12 +8,13 @@ class Instance(models.Model):
     _order = 'client'
 
     #Fields
-    client = fields.Many2one('instance.manager.client','Client')
+    client = fields.Many2one('res.partner','Client')
     ip = fields.Char('IP',15)
-    version = fields.selection([(),()],'Version')
+    version = fields.selection([('8.0','8.0'),('9.0','9.0'),('10.0','10.0'),('11.0','11.0')],'Version')
     domains = fields.One2many('modelo','campo','Domain')
     machine = fields.Char('Machine')
     state = fields.Boolean('State')
+    description = fields.Text('','Description');
     backEndLogin = fields.Many2one('instance.manager.login','BackEnd Login')
     postgresqlLogin = fields.Many2one('instance.manager.login','Postgresql Login')
     sshLogin = fields.Many2one('instance.manager.loggin','SSH Login')
